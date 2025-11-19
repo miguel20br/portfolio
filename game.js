@@ -197,5 +197,56 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+// Touch Controls (Swipe)
+let touchStartX = 0;
+let touchStartY = 0;
+
+canvas.addEventListener('touchstart', function (e) {
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+    e.preventDefault(); // Prevent scrolling
+}, { passive: false });
+
+canvas.addEventListener('touchmove', function (e) {
+    e.preventDefault(); // Prevent scrolling while swiping
+}, { passive: false });
+
+canvas.addEventListener('touchend', function (e) {
+    if (!isGameRunning) {
+        isGameRunning = true;
+        drawGame();
+    }
+
+    let touchEndX = e.changedTouches[0].screenX;
+    let touchEndY = e.changedTouches[0].screenY;
+
+    handleSwipe(touchStartX, touchStartY, touchEndX, touchEndY);
+}, { passive: false });
+
+function handleSwipe(startX, startY, endX, endY) {
+    let xDiff = endX - startX;
+    let yDiff = endY - startY;
+
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {
+        // Horizontal swipe
+        if (xDiff > 0) {
+            // Right
+            if (dx !== -1) { dx = 1; dy = 0; }
+        } else {
+            // Left
+            if (dx !== 1) { dx = -1; dy = 0; }
+        }
+    } else {
+        // Vertical swipe
+        if (yDiff > 0) {
+            // Down
+            if (dy !== -1) { dx = 0; dy = 1; }
+        } else {
+            // Up
+            if (dy !== 1) { dx = 0; dy = -1; }
+        }
+    }
+}
+
 // Start initial render
 drawGame();
