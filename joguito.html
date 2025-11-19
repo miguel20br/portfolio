@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joguito da Cobrinha | Miguel Cunha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+    <div class="crt-overlay"></div>
+    <div class="scanline"></div>
+
+    <div class="game-container">
+        <header>
+            <h1>SNAKE 16-BIT</h1>
+            <div class="score-board">
+                <p>SCORE: <span id="score">0</span></p>
+                <p>HIGH SCORE: <span id="high-score">0</span></p>
+            </div>
+        </header>
+
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+        <div class="controls-info">
+            <p>USE SETAS PARA MOVER</p>
+        </div>
+
+        <a href="index.html" class="back-btn">VOLTAR AO PORTFÓLIO</a>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
