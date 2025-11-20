@@ -181,24 +181,6 @@ nav {
     transition: all 0.3s ease;
 }
 
-.skill-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--secondary-accent);
-    box-shadow: 0 0 20px rgba(189, 0, 255, 0.15);
-}
-
-.skill-card i {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: var(--primary-accent);
-}
-
-/* Contact Section */
-.contact-section {
-    padding: 5rem 2rem;
-    text-align: center;
-}
-
 .contact-card {
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
     border: 1px solid var(--glass-border);
