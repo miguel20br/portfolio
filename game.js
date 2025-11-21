@@ -192,6 +192,8 @@ function drawFood() {
 }
 
 function moveSnake() {
+    if (dx === 0 && dy === 0) return;
+
     const head = { x: snake[0].x + dx, y: snake[0].y + dy };
 
     // Wall Collision
@@ -201,7 +203,7 @@ function moveSnake() {
     }
 
     // Self Collision
-    for (let i = 0; i < snake.length; i++) {
+    for (let i = 1; i < snake.length; i++) {
         if (head.x === snake[i].x && head.y === snake[i].y) {
             isGameOver = true;
             return;
@@ -252,8 +254,11 @@ function handleGameOver() {
 }
 
 function resetGame() {
-    snake = [{ x: 10, y: 10 }];
-    food = { x: 15, y: 15 };
+    tileCount = canvas.width / gridSize;
+    const center = Math.floor(tileCount / 2);
+    snake = [{ x: center, y: center }];
+    food = { x: 15, y: 15 }; // Should also be random or safe
+    generateFood(); // Generate safe food
     dx = 0;
     dy = 0;
     score = 0;
