@@ -53,24 +53,6 @@ body {
 
 nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    background: linear-gradient(45deg, var(--primary-accent), var(--secondary-accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
 }
 
 .nav-links a {
@@ -88,25 +70,6 @@ nav {
 .hero-section {
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 2rem;
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    margin: 0.5rem 0;
-    background: linear-gradient(to right, #fff, #ccc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.subtitle {
-    color: var(--primary-accent);
-    font-weight: 600;
-    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
@@ -141,22 +104,6 @@ nav {
     text-decoration: none;
     transition: all 0.3s ease;
     backdrop-filter: blur(5px);
-}
-
-.glass-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--primary-accent);
-    transform: translateY(-2px);
-    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
-}
-
-/* Skills Section */
-.skills-section {
-    padding: 5rem 2rem;
-}
-
-.container {
-    max-width: 1200px;
     margin: 0 auto;
 }
 
