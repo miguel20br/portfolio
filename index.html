@@ -30,7 +30,6 @@
             <div class="logo">MC.</div>
             <ul class="nav-links">
                 <li><a href="#hero">Início</a></li>
-                <li><a href="#ai-skills" style="color: var(--primary-accent);">AI & Inovação</a></li>
                 <li><a href="#skills">Habilidades</a></li>
                 <li><a href="#experience">Experiência</a></li>
                 <li><a href="joguito.html" style="color: var(--secondary-accent);">Joguito 🎮</a></li>
@@ -59,66 +58,81 @@
             </div>
         </section>
 
-        <!-- AI & Innovation Section -->
-        <section id="ai-skills" class="ai-section">
-            <div class="container">
-                <h2 class="section-title fade-in">AI & Inovação 🤖</h2>
-                <div class="ai-grid">
-                    <div class="ai-card glass-card fade-in">
-                        <div class="ai-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3>Inteligência Artificial</h3>
-                        <p>Explorando o potencial de LLMs e agentes autônomos para resolver problemas complexos.</p>
-                    </div>
-                    <div class="ai-card glass-card fade-in">
-                        <div class="ai-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3>Generative AI</h3>
-                        <p>Criação de soluções criativas e funcionais utilizando as mais recentes tecnologias de IA
-                            generativa.</p>
-                    </div>
-                    <div class="ai-card glass-card fade-in">
-                        <div class="ai-icon">
-                            <i class="fab fa-python"></i>
-                        </div>
-                        <h3>Python for AI</h3>
-                        <p>Desenvolvimento de scripts e automações focados em aprendizado de máquina e análise de dados.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="skills" class="skills-section">
             <div class="container">
                 <h2 class="section-title fade-in">Minhas Habilidades</h2>
                 <div class="skills-grid">
                     <!-- Skill Cards -->
-                    <div class="skill-card glass-card fade-in">
-                        <i class="fab fa-python"></i>
-                        <h3>Python</h3>
+                    <div class="skill-card glass-card fade-in" onclick="toggleSkill(this)">
+                        <div class="skill-header">
+                            <i class="fas fa-robot"></i>
+                            <h3>Agentes de IA</h3>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="skill-details">
+                            <p>Criação de agentes, treinamento de modelos, experiência com diversos tipos de LLMs,
+                                programação de agentes.</p>
+                        </div>
                     </div>
-                    <div class="skill-card glass-card fade-in">
-                        <i class="fab fa-js"></i>
-                        <h3>JavaScript</h3>
+                    <div class="skill-card glass-card fade-in" onclick="toggleSkill(this)">
+                        <div class="skill-header">
+                            <i class="fab fa-python"></i>
+                            <h3>Python</h3>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="skill-details">
+                            <p>Automação, Data Science, Web Scraping, Desenvolvimento de APIs e Scripts.</p>
+                        </div>
                     </div>
-                    <div class="skill-card glass-card fade-in">
-                        <i class="fas fa-database"></i>
-                        <h3>Databases</h3>
+                    <div class="skill-card glass-card fade-in" onclick="toggleSkill(this)">
+                        <div class="skill-header">
+                            <i class="fab fa-js"></i>
+                            <h3>JavaScript</h3>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="skill-details">
+                            <p>Manipulação do DOM, ES6+, Async/Await e Frameworks modernos.</p>
+                        </div>
                     </div>
-                    <div class="skill-card glass-card fade-in">
-                        <i class="fas fa-pencil-ruler"></i>
-                        <h3>UX/UI Design</h3>
+                    <div class="skill-card glass-card fade-in" onclick="toggleSkill(this)">
+                        <div class="skill-header">
+                            <i class="fas fa-database"></i>
+                            <h3>Databases</h3>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="skill-details">
+                            <p>Modelagem de dados, SQL, NoSQL e Otimização de queries.</p>
+                        </div>
                     </div>
-                    <div class="skill-card glass-card fade-in">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3>Web Design</h3>
+                    <div class="skill-card glass-card fade-in" onclick="toggleSkill(this)">
+                        <div class="skill-header">
+                            <i class="fas fa-pencil-ruler"></i>
+                            <h3>UX/UI Design</h3>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="skill-details">
+                            <p>Prototipagem no Figma, Pesquisa de usuário e Design Responsivo.</p>
+                        </div>
                     </div>
-                    <div class="skill-card glass-card fade-in">
-                        <i class="fas fa-language"></i>
-                        <h3>Inglês Fluente</h3>
+                    <div class="skill-card glass-card fade-in" onclick="toggleSkill(this)">
+                        <div class="skill-header">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Web Design</h3>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="skill-details">
+                            <p>HTML5, CSS3, Flexbox, Grid e Animações CSS.</p>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card fade-in" onclick="toggleSkill(this)">
+                        <div class="skill-header">
+                            <i class="fas fa-language"></i>
+                            <h3>Inglês Fluente</h3>
+                            <i class="fas fa-chevron-down toggle-icon"></i>
+                        </div>
+                        <div class="skill-details">
+                            <p>Comunicação fluente, Leitura técnica e Escrita avançada.</p>
+                        </div>
                     </div>
                 </div>
             </div>
